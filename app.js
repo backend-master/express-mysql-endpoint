@@ -11,8 +11,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const bookRoute = require("./routes/books");
+const userRoute = require("./routes/users");
 
 app.use("/api/v1/books", bookRoute);
+app.use("/api/v1/users", userRoute);
 
 app.listen(PORT, () =>
   console.log(`Server running at http://localhost:${PORT}`)

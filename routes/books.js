@@ -1,9 +1,9 @@
 const express = require("express");
 const Router = express.Router();
 
-const bookController = require("../controllers/bookControllerr");
+const bookController = require("../controllers/bookController");
 
-Router.route("/createTB").get(bookController.createDatabase);
-Router.route("/deleteTB").get(bookController.deteleDatabase);
+Router.get("/createTB", bookController.createDatabase);
+Router.get("/deleteTB", bookController.deteleDatabase);
 
 module.exports = Router;
