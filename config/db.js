@@ -1,4 +1,4 @@
-if (!process.env.now) require("dotenv").config();
+require("dotenv").config();
 
 const mysql = require("mysql");
 
@@ -15,5 +15,9 @@ db.connect(err => {
     console.log("running");
   }
 });
+
+setInterval(function() {
+  db.query("SELECT 1");
+}, 5000);
 
 module.exports = db;
