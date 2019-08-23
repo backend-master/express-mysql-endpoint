@@ -71,5 +71,29 @@ module.exports = {
         });
       }
     });
+  },
+
+  getOrderById: (req, res) => {
+    const id = req.params.id;
+    const sql = `
+    SELECT orders.id, users.name, users.address, books.name AS title, books.author 
+    FROM orders 
+    INNER JOIN users ON orders.id = users.id
+    INNER JOIN books ON orders.id = books.id
+    WHERE orders.id = ?
+    `;
+    db.query(sql, id, (err, result) => {
+      if (err) {
+        return console.log(err);
+      } else {
+        res.status(200).json({
+          err: false,
+          errMessage: null,
+          data: {
+            id: result
+          }
+        });
+      }
+    });
   }
 };
