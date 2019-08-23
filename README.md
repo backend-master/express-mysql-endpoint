@@ -22,11 +22,12 @@ After that make the table :
 ![table](/assets/table.png)
 
 or you can create table using my endpoint :
-| Endpoint | HTTP | Description | Body |
-| --------------------- | ---- | ------------- | ------------------------------------------------------------- |
-| `/api/v1/books/createTB` | GET | Create Books Table | |
-| `/api/v1/users/createTB` | GET | Create User Table | |
-| `/api/v1/orders/createTB` | GET | Create User Table | |
+
+| Endpoint                  | HTTP | Description         | Body |
+| ------------------------- | ---- | ------------------- | ---- |
+| `/api/v1/books/createTB`  | GET  | Create Books Table  |      |
+| `/api/v1/users/createTB`  | GET  | Create Users Table  |      |
+| `/api/v1/orders/createTB` | GET  | Create Orders Table |      |
 
 2. Create Controller
 
